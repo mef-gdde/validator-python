@@ -22,7 +22,7 @@ def read_file(file_path):
 
 parser = etree.XMLParser()
 parser.resolvers.add(XSDResolver('validation-schema/maindoc/'))
-xsd_file_path = '/Users/phaney/dev/e-invoice/python-validator/validation-schema/maindoc/UBL-Invoice-2.1.xsd'
+xsd_file_path = 'validation-schema/maindoc/UBL-Invoice-2.1.xsd'
 xsd_content = read_file(xsd_file_path)
 # Parse the XSD schema
 xsd_root = etree.XML(xsd_content.encode('utf-8'), parser)
